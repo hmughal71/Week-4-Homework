@@ -78,16 +78,19 @@
 }
 
 #score-btn {
-    margin-top: 175px;
-    margin-left: -188px;
-    margin-bottom: auto;
-    width: fit-content;
-    background-color: rgba(177, 147, 93, 0.904);
+    margin-top: 6px;
+    margin-left: -10px;
+    padding: 5px 0px 5px 0px;
+    margin-bottom: 9px;
+    width: auto
     color: saddlebrown;
 }
 
 #score-btn:hover {
-    box-shadow: 0 0.4rem 1.4rem 0 saddlebrown;
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 darkred;
+    transition: transform 150ms;
+    transform: scale(1.05);
 }
 
 .fa-crown {
@@ -110,20 +113,26 @@
 #progressText {
     font-family: serif;
     font-size: 25px;
-    margin-left: -20px;
+    margin-left: 39px;
+    margin-top: 67px;
 }
 
 #progressBar {
-    width: 25px;
-    height: 24px;
+    width: 32px;
+    height: 48px;
     border: 2px solid green;
-    margin-top: 5px;
-    margin-left: 0px;
+    margin-top: 13px;
+    margin-left: -12px;
     /* font-family: serif; */
     /* font-size: 5px; */
     background-color: yellow;
     border-radius: 9px;
     overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background-color: ;
 }
 
 /* HUD 8 */
@@ -138,18 +147,24 @@
 }
 
 .hud-prefix {
-    text-align: center;
-    font-size: 2rem;
+    font-family: serif;
+    font-size: 25px;
+    margin-left: 208px;
+    margin-top: 67px;
 }
 
 .hud-main-text {
     font-family: serif;
-    font-size: 25px;
+    font-size: 50px;
     text-align: center;
-    background-color: navy;
-    color: #d9dcd6;
-    width: 30px;
-    margin-right: 278px;
+    width: 38px;
+    margin-right: 302px;
+}
+
+#score {
+    font-family: serif;
+    font-size: 50px;
+    margin: 8px 0px 0px 215px;
 }
 
 #question {
