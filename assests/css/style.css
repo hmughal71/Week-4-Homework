@@ -78,8 +78,8 @@
 }
 
 #score-btn {
-    margin-top: 566px;
-    margin-left: -477px;
+    margin-top: 175px;
+    margin-left: -188px;
     margin-bottom: auto;
     width: fit-content;
     background-color: rgba(177, 147, 93, 0.904);
@@ -110,15 +110,20 @@
 #progressText {
     font-family: serif;
     font-size: 25px;
-    margin-left: 3px;
+    margin-left: -20px;
 }
 
 #progressBar {
-    border-radius: 9px;
-    font-family: serif;
-    font-size: 5px;
+    width: 25px;
+    height: 24px;
+    border: 2px solid green;
+    margin-top: 5px;
+    margin-left: 0px;
+    /* font-family: serif; */
+    /* font-size: 5px; */
     background-color: yellow;
-
+    border-radius: 9px;
+    overflow: hidden;
 }
 
 /* HUD 8 */
@@ -151,7 +156,7 @@
     font-family: sans-serif;
     font-size: 25px;
     color: brown;
-    margin: 10px 0px 10px 0px;
+    margin: 28px 0px 16px -11px;
 }
 
 .choice-container {
