@@ -60,14 +60,13 @@
     font-size: 2.4rem;
     font-family: sans-serif;
     padding: 1rem;
-    width: 100px;
+    width: auto;
     text-align: center;
-    margin-left: 170px;
+    margin-left: -10px;
     margin-bottom: 1rem;
     text-decoration: none;
-    color:sandybrown;
+    color: sandybrown;
     background-color: saddlebrown;
-    background: linear-gradient(90deg,saddlebrown, 0%, saddlebrown, 100%);
     border-radius: 6px;
 }
 
@@ -79,7 +78,10 @@
 }
 
 #score-btn {
-    margin-top: 500px;
+    margin-top: 566px;
+    margin-left: -477px;
+    margin-bottom: auto;
+    width: fit-content;
     background-color: rgba(177, 147, 93, 0.904);
     color: saddlebrown;
 }
@@ -96,12 +98,114 @@
 .container-quiz {
     display: flex;
     color:rgba(177, 147, 93, 0.904);
-    background-color: darkolivegreen;
+    background-color: none;
     margin-top: 229px;
     margin-left: -392px;
+}
+
+#game {
+    margin: -60px 16px 0px -100px;
+}
+
+#progressText {
+    font-family: serif;
+    font-size: 25px;
+    margin-left: 3px;
+}
+
+#progressBar {
+    border-radius: 9px;
+    font-family: serif;
+    font-size: 5px;
+    background-color: yellow;
+
+}
+
+/* HUD 8 */
+#hud {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hud-item {
+    font-family: serif;
+    font-size: 25px;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hud-main-text {
+    font-family: serif;
+    font-size: 25px;
+    text-align: center;
+    background-color: navy;
+    color: #d9dcd6;
+    width: 30px;
+    margin-right: 278px;
 }
 
 #question {
     font-family: sans-serif;
     font-size: 25px;
+    color: brown;
+    margin: 10px 0px 10px 0px;
+}
+
+.choice-container {
+    display: flex;
+    margin-bottom: 0.8rem;
+    padding: 5px 0 5px 5px;
+    width: fit-content;
+    color: darksalmon;
+    background-color: darkslategray;
+    border-radius: 4px;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 darksalmon;
+    transform: scale(1.02);
+    transition: transform 100ms;
+}
+
+.choice-prefix {
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 0px 6px 8px 2px;
+}
+
+.choice-text {
+    font-family: sans-serif;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 10px;
+    width: 71px
+}
+
+.correct {
+    background-color: green;
+}
+
+.incorrect {
+    background-color: rgba(233, 71, 71, 0.377);
+}
+
+
+
+
+#progressBar {
+    width: 20rem;
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .choice-container {
+        min-width: 40rem;
+    }
 }
