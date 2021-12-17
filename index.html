@@ -17,7 +17,7 @@
             <a id="score-btn" class="btn">High Score<id class="fas fa-crown"></a>
         </div>
         <div class="container-quiz">
-            <div id="game" class="justify-center" class="flex-column">
+            <div id="quiz" class="justify-center" class="flex-column">
                 <div id="hud">
                     <div class="hud-item">
                         <p id="progressText" class="hud-prefix">
@@ -55,8 +55,18 @@
                 </div>
             </div>
         </div>
-        
     </div>
+
+   <div class="container">
+       <div id="end" class="flex-container flex-column">
+           <h1 id="finalscore">0</h1>
+           <form class="end-form container">
+               <h2 id="end-text">Please enter your name to save your score</h2>
+               <input type="text" name="name" id="username" placeholder="Enter your name">
+               <button class="btnssc" id="savescorebtn" type="Submit" onClick="saveHighScore(event)" disabled>Save</button>
+           </form>  
+       </div>
+   </div>
     <script src="./assests/js/script.js"></script>
     
 </body>

@@ -1,14 +1,14 @@
-var questions = document.querySelector("#question")
-var choices = Array.from(document.querySelectorAll(".choice-text"))
-var progressText = document.querySelector("#progressText")
-var scoreText = document.querySelector("#score")
-var progressBarFull = document.querySelector("#progressBarFull")
+const questions = document.querySelector("#question")
+const choices = Array.from(document.querySelectorAll(".choice-text"))
+const progressText = document.querySelector("#progressText")
+const scoreText = document.querySelector("#score")
+const progressBarFull = document.querySelector("#progressBarFull")
 
-var currentQuestion = {}
-var acceptingAnswers = true
-var score = 0
-var questionCounter = 0
-var questions = [
+const currentQuestion = {}
+const acceptingAnswers = true
+const score = 0
+const questionCounter = 0
+questions = [
     {
         question: "Commonly used DATA types DO NOT include",
         choice1: "strings",
@@ -52,15 +52,15 @@ var questions = [
     },
 ]
 
-var SCORE_POINTS = 100
-var MAX_QUESTIONS = 5
+let SCORE_POINTS = 100
+let MAX_QUESTIONS = 5
 
 startQuiz = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
     getNewQuestion()
-}
+},
 
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
@@ -85,17 +85,17 @@ getNewQuestion = () => {
     availableQuestions.splice(questionsIndex, 1)
 
     acceptingAnswers = true
-}
+},
 
 choices.forEach(choices => {
     choice.addEventListener("click", e => {
         if(!acceptingAnswers) return
 
         acceptingAnswers = false
-        var selectedChoice = e.target
-        var selectedAnswer = selectedChoice.dataset["number"]
+        const selectedChoice = e.target
+        const selectedAnswer = selectedChoice.dataset["number"]
 
-        var classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect"
+        const classToApply = selectedAnswer == currentQuestion.answer ? "correct" : "incorrect"
 
         if(classToApply === "correct") {
             incrementScore(SCORE_POINTS)
@@ -108,10 +108,13 @@ choices.forEach(choices => {
             getNewQuestion()
         }, 1000)
     })
-})
+}),
 
 incrementScore = num => {
     score +=numscoreText.innerText = score
-}
+},
 
-startQuiz()
+startQuiz() => {
+    start.addEventListener("click", e => {
+        questions
+} 
