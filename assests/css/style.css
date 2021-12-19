@@ -36,15 +36,15 @@
     font-size: 20px;
 }
 
-/*.h2 {
+.h2 {
     font-size: 42px;
     font-family: sans-serif;
-    //*margin-bottom: 4rem;
-}*/
+    margin-bottom: 4rem;
+}
 
-/*.hide {
+.hide {
     display: none;
-}*/
+}
 
 #section-start-game {
     width: 100%;
@@ -120,6 +120,10 @@
     text-align: center;
     margin: 10px 10px 10px 2px;
     width: auto;
+}
+
+#correct-answer {
+    background-color: green;
 }
 
 #section-end-game {
