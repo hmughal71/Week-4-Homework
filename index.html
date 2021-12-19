@@ -4,70 +4,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Week-4-Homework/assests/css/style.css">
-    <link rel="stylesheet" href=".<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">">
+    <link rel="stylesheet" href="./assests/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <title>Week 4 Homework</title>
 </head>
+
 <body>
 
-    <div class="container">
-        <div id="home" class="flex-column" class="flex-center">
-            <h1 class="h1">Coding Quiz Challenge</h1>
-            <a class="btn">Start</a>
-            <a id="score-btn" class="btn">High Score<id class="fas fa-crown"></a>
-        </div>
-        <div class="container-quiz">
-            <div id="quiz" class="justify-center" class="flex-column">
-                <div id="hud">
-                    <div class="hud-item">
-                        <p id="progressText" class="hud-prefix">
-                            Questions
-                        </p>
-                        <div id="progressBar">
-                            <div id="progressBarFull"></div>
-                        </div>
-                    </div>
-                    <div class="hud-item">
-                        <p class="hud-prefix">
-                            Score
-                        </p>
-                        <h1 class="hud-main-text" id="score">
-                            0
-                        </h1>
-                    </div>
-                </div>
-                <div id="question"></div>
-                <div class="choice-container">
-                    <p class="choice-prefix">A</p>
-                    <p class="choice-text"data-number="1">Choice 1</p>
-                </div>
-                <div class="choice-container">
-                    <p class="choice-prefix">B</p>
-                    <p class="choice-text"data-number="2">Choice 2</p>
-                </div>
-                <div class="choice-container">
-                    <p class="choice-prefix">C</p>
-                    <p class="choice-text"data-number="3">Choice 3</p>
-                </div>
-                <div class="choice-container">
-                    <p class="choice-prefix">D</p>
-                    <p class="choice-text"data-number="4">Choice 4</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--Header with nav bar and timer in nav bar-->
+    <header>
+        <h1 class="h1">Coding Quiz Challenge</h1>
+        
+        <nav id="nav-timer" class="hide">
+            <span id="timer">Timer: </span>> <span id="span-timer">60</span> sec
 
-   <div class="container">
-       <div id="end" class="flex-container flex-column">
-           <h1 id="finalscore">0</h1>
-           <form class="end-form container">
-               <h2 id="end-text">Please enter your name to save your score</h2>
-               <input type="text" name="name" id="username" placeholder="Enter your name">
-               <button class="btnssc" id="savescorebtn" type="Submit" onClick="saveHighScore(event)" disabled>Save</button>
-           </form>  
-       </div>
-   </div>
-    <script src="./assests/js/script.js"></script>
+        </nav>
+    </header>
+
+    <!--Landing Page-->
+
+    <!--Start Button-->
+    <sectiom id="section-start-game">
+
+        <button id="btn-start-game">Start</button>
+
+    </sectiom>
+
+
+
+
+    <!--Questions-->
+    <!--Click on start to start the timer and the game-->
+    <!--Show questions-->
+
+    <article id="section-question" class="hide">
+
+        <h1 id="question-title">Question Titles</h1>
+
+        <div class="answer-choices">
+            <p class="choice-prefix">A</p>
+            <p class="choice-text"data-number="1">Choice 1</p>
+        </div>
+
+        <div class="answer-choices">
+            <p class="choice-prefix">B</p>
+            <p class="choice-text"data-number="2">Choice 2</p>
+        </div>
+
+        <div class="answer-choices">
+            <p class="choice-prefix">C</p>
+            <p class="choice-text"data-number="3">Choice 3</p>
+        </div>
+
+        <div class="answer-choices">
+            <p class="choice-prefix">D</p>
+            <p class="choice-text"data-number="4">Choice 4</p>
+        </div>
+
+    </article>
+
+    <!--End page game-->
+    <!--Form for the player to fill in the initials-->
+
+    <section id="section-end-game" class="hide">
+
+        <form>
+            <h1 class="high-score">High Score is <span id="span-high-score"></span></h1>
+
+            <input type="text" class="placeholder" placeholder="Your Initials">
+            <button type="submit" id="submit-btn" class="fas fa-crown">Submit</button>
+        </form>
+    </section>
+
+
     
 </body>
 </html>

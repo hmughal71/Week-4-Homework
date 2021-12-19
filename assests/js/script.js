@@ -1,14 +1,14 @@
-const questions = document.querySelector("#question")
+const questionsElement = document.querySelector("#question")
 const choices = Array.from(document.querySelectorAll(".choice-text"))
 const progressText = document.querySelector("#progressText")
 const scoreText = document.querySelector("#score")
 const progressBarFull = document.querySelector("#progressBarFull")
 
 const currentQuestion = {}
-const acceptingAnswers = true
-const score = 0
-const questionCounter = 0
-questions = [
+const acceptingAnswers = truesection-end-game
+let score = 0
+let questionCounter = 0
+const questions = [
     {
         question: "Commonly used DATA types DO NOT include",
         choice1: "strings",
@@ -55,14 +55,14 @@ questions = [
 let SCORE_POINTS = 100
 let MAX_QUESTIONS = 5
 
-startQuiz = () => {
+const startQuiz = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
     getNewQuestion()
-},
+};
 
-getNewQuestion = () => {
+const getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score)
 
@@ -73,19 +73,19 @@ getNewQuestion = () => {
     progressText.innerText = `Question ${questionCounter} of ${MAX_QUESTIONS}`
     progressBarFull.getElementsByClassName.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
-    var questionsIndex = Math.floor(Math.random() * availableQuestions.length)
+    const questionsIndex = Math.floor(Math.random() * availableQuestions.length)
     currentQuestion = availableQuestions[questionsIndex]
     question.innerText = currentQuestion.question
 
     choices.forEach(choices => {
-        var number = choice.dataset["number"]
+        const number = choice.dataset["number"]
         choice.innerText = currentQuestion["choice" + number]
     })
 
     availableQuestions.splice(questionsIndex, 1)
 
     acceptingAnswers = true
-},
+};
 
 choices.forEach(choices => {
     choice.addEventListener("click", e => {
@@ -108,13 +108,13 @@ choices.forEach(choices => {
             getNewQuestion()
         }, 1000)
     })
-}),
+});
 
-incrementScore = num => {
+const incrementScore = num => {
     score +=numscoreText.innerText = score
-},
+};
 
-startQuiz() => {
+const startQuiz = () => {
     start.addEventListener("click", e => {
         questions
 } 
