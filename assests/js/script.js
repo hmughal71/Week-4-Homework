@@ -1,12 +1,17 @@
 const startGameButton = document.getElementById("btn-start-game");
 const navTimer = document.getElementById("nav-timer");
+const sectionStartGame = document.getElementById("section-start-game");
 const sectionEndGame = document.getElementById("section-end-game");
-const spanTimer = document.getElemtById("span-timer");
+const spanTimer = document.getElementById("span-timer");
+const sectionQuestion = document.getElementById("section-question")
+const answerChoices = document.getElementById("answer-choices");
+const correctAnswer = document.getElementById("correct-answer-btn");
+const wrongAnswer = document.getElementById("wrong-answer-btn");
 
 let timeRemaining = 60; // 60 sec by default
 let timerId;
 
-functionnStartTimer() {
+function startTimer() {
     // show timer in nav
     navTimer.classList.remove("hide");
 
@@ -35,6 +40,7 @@ function endGame(){
 //when I click the start button
 startGameButton.addEventListener("click", function(event){
     event.preventDefault();
+    console.log("Start Button Click")
     // start the timer
     startTimer();
     //hide the landing page
@@ -45,6 +51,9 @@ startGameButton.addEventListener("click", function(event){
 });
 
 // when I click on a choice on the question
+correctAnswer.addEventListener("click", function(event){
+    event
+});
 // if correct
 // 1 sec delay, highlight choice with green bg
 // then move on to the next question
@@ -67,10 +76,3 @@ startGameButton.addEventListener("click", function(event){
 // if we click on submit,
 // save the user initial and final time remaining to local storage
 // redirect the user to the high score page
-
-
-
-
-
-
-
